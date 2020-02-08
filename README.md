@@ -1,7 +1,7 @@
 # Microservice-demo
 
 
-This project is consist of two services namely client and greetings
+This project consists of two services namely client and greetings
 
 Here client application is using ribbon to communicate with our microservice greetings which can be hosted on several servers/ports.
 
