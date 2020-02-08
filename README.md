@@ -1,9 +1,9 @@
 # Microservice-demo
-Created a couple of microservices using spring boot and get them to talk with each other using eureka and ribbon for client side load balancing
 
-This project is consist of two microservices namely client and greetings
 
-client is using ribbon to communicate with our microservice greetings which can hosted on several servers/ports
+This project is consist of two services namely client and greetings
+
+Here client application is using ribbon to communicate with our microservice greetings which can be hosted on several servers/ports.
 
 ------------Eureka Configuration----------------
 
@@ -13,13 +13,13 @@ It is required to add dependency spring-cloud-starter-netflix-eureka-server in p
 
 By Default eureka server runs on port 8761, where you can see instances which are currently registred with eureka.
 
-To register our microservices with eureka, EnableDiscoveryClient or EnableEurekaClient annotations are used.
+To register our microservices with eureka, EnableDiscoveryClient or EnableEurekaClient annotations are used in services.
 
 -----------Ribbon Configuartion----------------------
 
-Ribbon is congigured in client application ie the application which sneds http requests to other microservices
+Ribbon is congigured in client application ie the application which sends http requests to other microservices
 
-In our case client will send HTTP get request to greetings api which will return string object.
+In our case client will send HTTP get request using restTemplate to greetings api which will return string object.
 
 It is required to add dependency spring-cloud-starter-netflix-ribbon in pom.xml for ribbon client.
 
